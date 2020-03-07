@@ -1,2 +1,2 @@
-# Freakout-Project
-ETL project
+# Public-Freakout
+People done gone crazy!

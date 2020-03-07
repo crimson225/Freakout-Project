@@ -1,0 +1,25 @@
+create table Bud(
+Dateof date primary key,
+Bud_Open decimal,
+Bud_High decimal,
+Bud_Low decimal,
+Bud_Close decimal,
+Bud_Volume int
+);
+create table Dow(
+Dateof date primary key,
+Dow_Open decimal,
+Dow_High decimal,
+Dow_Low decimal,
+Dow_Close decimal,
+Dow_Volume int
+);
+create table Cases(
+Dateof date primary key,
+Case_count int
+);
+create table Reddit(
+Dateof date primary key,
+Post_count int
+);
+

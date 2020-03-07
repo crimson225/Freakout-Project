@@ -1,0 +1,14 @@
+select * from bud;
+select * from cases;
+select * from dow;
+select * from reddit;
+
+create view freaky_table as
+SELECT bud.thisday, bud.Bud_Close, dow.Dow_Close, cases.Case_count, reddit.Post_count from bud
+LEFT JOIN reddit
+ON reddit.thisday = bud.thisday 
+LEFT JOIN cases
+on cases.thisday = bud.thisday
+LEFT JOIN dow
+on dow.thisday = bud.thisday
+

@@ -1,0 +1,41 @@
+
+Project Report:
+---------------------------------------------
+Extract:
+Original data sources and how the data was formatted:
+*Yahoo! Finance for AB stocks; csv format
+*Reddit API for social media mentions; JSON format, converted to csv
+*Were going to use Twitter data, but the API required multiple freeform
+	inputs as to data usage, and there was no reference to how long
+	the approval process would take. Also seemed like we might not be
+	able to get exactly what we were looking for with Twitter.
+
+
+Transform:
+What data cleaning or transformation was required:
+Yahoo! Finance: dropped a few columns, renamed tables. Had to massage in excel 
+(text to columns, data format, concatenate, delimit). Groupby data, sum number of cases.
+Reddit: 1000 limit, ran loop to update/grab all data. Parse JSON, populate df. Filtered data
+to match stock data. Ouput to csv. 
+Full dataset:  Join stock data to social media data, drop unnecessary columns.
+
+*In addition we plotted data bc we had time and were interested in the results. These are reflected
+in our notebooks.
+
+
+Load:
+The final database, tables, and why this was chosen
+*Database in postgres bc we were using more than one csv/different tables. We're doing a fairly
+routine analysis which we're joining the data on date, so we did not feel we needed a non-relational DB to accomplish
+our task, also because we have more experience/feel more comfortable with that tool over MongoDB. 
+*This data set was chosen for a few reasons:
+	1. We had read online that 36% of Americans believe that Corona beer was related to, or caused 
+	coronavirus
+	2. Topic is current, relevant
+	3. Topic is easily digestible, understandable (not foreign)
+	4. Stock data was easily accessible
+	5. Per project instructions we wanted to keep tight parameters on
+	scope of project
+
+
+
